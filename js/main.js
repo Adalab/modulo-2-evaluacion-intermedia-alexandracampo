@@ -23,7 +23,7 @@ function randomGame(event) {
         clue.innerHTML = "Demasiado alto";
     } else if (numberChoice < randomNumber) {
         clue.innerHTML = "Demasiado bajo"
-    } else if (numberChoice === randomNumber) {
+    } else if (numberChoice == randomNumber) {
         clue.innerHTML = '¡Has ganado, campeona!'
     } else {
         clue.innerHTML = "Debes introducir un número"
