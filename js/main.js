@@ -26,7 +26,7 @@ function randomGame(event) {
     } else if (numberChoice === randomNumber) {
         clue.innerHTML = '¡Has ganado, campeona!'
     } else {
-        clue.innerHTML = "El número debe estar entre 1 y 100"
+        clue.innerHTML = "Debes introducir un número"
     }
 
     contador++;
