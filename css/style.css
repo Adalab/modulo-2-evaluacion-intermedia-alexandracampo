@@ -1,0 +1,35 @@
+.h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.box1 {
+    border-radius: 5%;
+    border: rgb(31, 182, 131) solid 2px;
+}
+
+.button {
+    border-radius: 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    background-color: rgb(31, 182, 131);
+    border: 0px;
+    height: 25px;
+    width: 70px;
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+}
+
+.box-clue {
+    color: rgb(87, 86, 86);
+}
+
+.box-counter {
+    color: rgb(87, 86, 86);
+
+}
