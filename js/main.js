@@ -13,30 +13,34 @@ const randomNumber = getRandomNumber(100)
 console.log(randomNumber);
 
 function randomGame(event) {
-
-    const numberChoice = gameNumber.value;
+    event.preventDefault()
+    const numberChoice = parseInt(gameNumber.value);
     console.log(numberChoice);
 
-    if (numberChoice > 100 || numberChoice < 1) {
-        clue.innerHTML = "El número debe estar entre 1 y 100"
+    if (numberChoice > 100 || numberChoice < 1 || isNaN(numberChoice)) {
+        printScreen("El número debe estar entre 1 y 100");
     } else if (numberChoice > randomNumber) {
-        clue.innerHTML = "Demasiado alto";
+        printScreen("Demasiado alto");
     } else if (numberChoice < randomNumber) {
-        clue.innerHTML = "Demasiado bajo"
-    } else if (numberChoice == randomNumber) {
-        clue.innerHTML = '¡Has ganado, campeona!'
-    } else {
-        clue.innerHTML = "Debes introducir un número"
+        printScreen("Demasiado bajo");
+    } else if (numberChoice === randomNumber) {
+        printScreen("¡Has ganado, campeona!");
     }
 
-    contador++;
-    counter.innerHTML = `Número de intentos: ${contador}`;
+    function printScreen(message) {
+        clue.innerHTML = message;
+    }
 
+    function actualizarContador() {
+        contador++;
+        counter.innerHTML = `Número de intentos: ${contador}`;
+    }
+    actualizarContador()
 };
 
+
+
 btnGame.addEventListener('click', randomGame);
-
-
 
 
 
